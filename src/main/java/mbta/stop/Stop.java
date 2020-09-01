@@ -36,14 +36,14 @@ public class Stop
     private final Location location;
 
 
-    public Stop(StopList.Stop data)
+    public Stop(StopList.Stop stop)
     {
-        Attributes attributes = data.getAttributes();
-        Data stopData = data.getRelationships().getParentStation().getData();
+        Attributes attributes = stop.getAttributes();
+        Data data = stop.getRelationships().getParentStation().getData();
 
         // Get data
         name = attributes.getName();
-        id = (stopData == null) ? data.getId() : stopData.getId();
+        id = (data == null) ? stop.getId() : data.getId();
 
         // Get location
         double latitude = attributes.getLatitude();
