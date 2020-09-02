@@ -1,5 +1,6 @@
 package mbta.route;
 
+import mbta.APIResources;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,8 +18,9 @@ public class RouteController
     @GetMapping
     public Route[] getRoutes(@RequestBody RouteRequest request)
     {
-        String url = "https://api-v3.mbta.com/routes" +
-            "?filter[stop]=" + request.getStopId();
+        String url = APIResources.MBTA_URL + "/routes" +
+            "?filter[stop]=" + request.getStopId() +
+            "&api_key=" + APIResources.MBTA_KEY;
 
         // Get data and parse JSON
         RouteList routeList = template.getForObject(url, RouteList.class);

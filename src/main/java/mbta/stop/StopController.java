@@ -1,5 +1,6 @@
 package mbta.stop;
 
+import mbta.APIResources;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,11 +18,11 @@ public class StopController
     @GetMapping
     public Stop[] getStops(@RequestBody StopRequest request)
     {
-        String url = "https://api-v3.mbta.com/stops" +
+        String url = APIResources.MBTA_URL + "/stops" +
             "?filter[latitude]=" + request.getLatitude() +
             "&filter[longitude]=" + request.getLongitude() +
             "&page[limit]=" + request.getLimit() +
-            "&sort=distance";
+            "&sort=distance&api_key=" + APIResources.MBTA_KEY;
 
         // Get data and parse JSON
         StopList stopList = template.getForObject(url, StopList.class);
