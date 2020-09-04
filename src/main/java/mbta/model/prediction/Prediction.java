@@ -1,6 +1,6 @@
-package mbta.prediction;
+package mbta.model.prediction;
 
-import mbta.prediction.PredictionList.Prediction.Attributes;
+import mbta.model.prediction.PredictionList.Prediction.Attributes;
 
 @SuppressWarnings({ "unused", "RedundantSuppression" })
 public class Prediction

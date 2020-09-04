@@ -1,6 +1,8 @@
-package mbta.route;
+package mbta.controller.route;
 
 import mbta.APIResources;
+import mbta.model.route.Route;
+import mbta.model.route.RouteList;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

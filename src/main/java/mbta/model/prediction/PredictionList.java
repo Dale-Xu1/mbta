@@ -1,4 +1,4 @@
-package mbta.prediction;
+package mbta.model.prediction;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

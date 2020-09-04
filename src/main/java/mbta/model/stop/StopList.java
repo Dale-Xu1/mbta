@@ -1,4 +1,4 @@
-package mbta.stop;
+package mbta.model.stop;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

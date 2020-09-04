@@ -1,4 +1,4 @@
-package mbta.route;
+package mbta.model.route;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

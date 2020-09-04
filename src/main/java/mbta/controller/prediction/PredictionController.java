@@ -1,6 +1,8 @@
-package mbta.prediction;
+package mbta.controller.prediction;
 
 import mbta.APIResources;
+import mbta.model.prediction.Prediction;
+import mbta.model.prediction.PredictionList;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -1,21 +1,15 @@
-package mbta.prediction;
+package mbta.controller.route;
 
 @SuppressWarnings({ "unused", "RedundantSuppression", "FieldCanBeLocal", "FieldMayBeFinal" })
-public class PredictionRequest
+public class RouteRequest
 {
 
     private String stopId;
-    private String routeId;
 
 
     public String getStopId()
     {
         return stopId;
-    }
-
-    public String getRouteId()
-    {
-        return routeId;
     }
 
 }

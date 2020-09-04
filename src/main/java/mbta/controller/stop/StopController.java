@@ -1,6 +1,8 @@
-package mbta.stop;
+package mbta.controller.stop;
 
 import mbta.APIResources;
+import mbta.model.stop.Stop;
+import mbta.model.stop.StopList;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

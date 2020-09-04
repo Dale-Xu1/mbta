@@ -1,4 +1,4 @@
-package mbta.stop;
+package mbta.controller.stop;
 
 @SuppressWarnings({ "unused", "RedundantSuppression", "FieldCanBeLocal", "FieldMayBeFinal" })
 public class StopRequest

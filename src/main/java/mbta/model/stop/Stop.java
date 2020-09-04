@@ -1,7 +1,7 @@
-package mbta.stop;
+package mbta.model.stop;
 
-import mbta.stop.StopList.Stop.Attributes;
-import mbta.stop.StopList.Stop.Relationships.ParentStation.Data;
+import mbta.model.stop.StopList.Stop.Attributes;
+import mbta.model.stop.StopList.Stop.Relationships.ParentStation.Data;
 
 @SuppressWarnings({ "unused", "RedundantSuppression" })
 public class Stop

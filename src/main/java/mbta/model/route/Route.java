@@ -1,6 +1,6 @@
-package mbta.route;
+package mbta.model.route;
 
-import mbta.route.RouteList.Route.Attributes;
+import mbta.model.route.RouteList.Route.Attributes;
 
 @SuppressWarnings({ "unused", "RedundantSuppression" })
 public class Route
