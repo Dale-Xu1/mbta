@@ -2,18 +2,17 @@ package mbta.model.stop;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-@SuppressWarnings({ "unused", "RedundantSuppression" })
-public class StopList
+public class StopBody
 {
 
     public static class Stop
     {
         public static class Attributes
         {
-            private String name;
+            @JsonProperty private String name;
 
-            private double latitude;
-            private double longitude;
+            @JsonProperty private double latitude;
+            @JsonProperty private double longitude;
 
             public String getName()
             {
@@ -37,7 +36,7 @@ public class StopList
             {
                 public static class Data
                 {
-                    private String id;
+                    @JsonProperty private String id;
 
                     public String getId()
                     {
@@ -45,7 +44,7 @@ public class StopList
                     }
                 }
 
-                private Data data;
+                @JsonProperty private Data data;
 
                 public Data getData()
                 {
@@ -53,8 +52,7 @@ public class StopList
                 }
             }
 
-            @JsonProperty("parent_station")
-            private ParentStation parentStation;
+            @JsonProperty("parent_station") private ParentStation parentStation;
 
             public ParentStation getParentStation()
             {
@@ -62,10 +60,10 @@ public class StopList
             }
         }
 
-        private String id;
+        @JsonProperty private String id;
 
-        private Attributes attributes;
-        private Relationships relationships;
+        @JsonProperty private Attributes attributes;
+        @JsonProperty private Relationships relationships;
 
         public String getId()
         {
@@ -84,7 +82,7 @@ public class StopList
     }
 
 
-    private Stop[] data;
+    @JsonProperty private Stop[] data;
 
     public Stop[] getData()
     {

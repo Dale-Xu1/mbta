@@ -1,8 +1,8 @@
 package mbta.model.route;
 
-import mbta.model.route.RouteList.Route.Attributes;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import mbta.model.route.RouteBody.Route.Attributes;
 
-@SuppressWarnings({ "unused", "RedundantSuppression" })
 public class Route
 {
 
@@ -17,11 +17,13 @@ public class Route
             this.destination = destination;
         }
 
+        @JsonProperty
         public String getName()
         {
             return name;
         }
 
+        @JsonProperty
         public String getDestination()
         {
             return destination;
@@ -37,7 +39,7 @@ public class Route
     private final Direction[] directions;
 
 
-    public Route(RouteList.Route route)
+    public Route(RouteBody.Route route)
     {
         Attributes attributes = route.getAttributes();
 
@@ -63,21 +65,25 @@ public class Route
     }
 
 
+    @JsonProperty
     public String getName()
     {
         return name;
     }
 
+    @JsonProperty
     public String getShortName()
     {
         return shortName;
     }
 
+    @JsonProperty
     public String getId()
     {
         return id;
     }
 
+    @JsonProperty
     public Direction[] getDirections()
     {
         return directions;

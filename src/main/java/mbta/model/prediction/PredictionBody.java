@@ -2,22 +2,18 @@ package mbta.model.prediction;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-@SuppressWarnings({ "unused", "RedundantSuppression" })
-public class PredictionList
+public class PredictionBody
 {
 
     public static class Prediction
     {
         public static class Attributes
         {
-            @JsonProperty("arrival_time")
-            private String arrivalTime;
+            @JsonProperty("arrival_time") private String arrivalTime;
+            @JsonProperty("departure_time") private String departureTime;
 
-            @JsonProperty("departure_time")
-            private String departureTime;
+            @JsonProperty("direction_id") private int directionId;
 
-            @JsonProperty("direction_id")
-            private int directionId;
 
             public String getArrivalTime()
             {
@@ -35,7 +31,7 @@ public class PredictionList
             }
         }
 
-        private Attributes attributes;
+        @JsonProperty private Attributes attributes;
 
         public Attributes getAttributes()
         {
@@ -44,7 +40,7 @@ public class PredictionList
     }
 
 
-    private Prediction[] data;
+    @JsonProperty private Prediction[] data;
 
     public Prediction[] getData()
     {

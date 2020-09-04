@@ -1,13 +1,15 @@
 package mbta.controller.stop;
 
-@SuppressWarnings({ "unused", "RedundantSuppression", "FieldCanBeLocal", "FieldMayBeFinal" })
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+@SuppressWarnings("FieldMayBeFinal")
 public class StopRequest
 {
 
-    private double latitude;
-    private double longitude;
+    @JsonProperty private double latitude;
+    @JsonProperty private double longitude;
 
-    private int limit = 3;
+    @JsonProperty private int limit = 3;
 
 
     public double getLatitude()

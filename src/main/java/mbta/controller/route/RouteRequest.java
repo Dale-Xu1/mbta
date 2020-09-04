@@ -1,10 +1,11 @@
 package mbta.controller.route;
 
-@SuppressWarnings({ "unused", "RedundantSuppression", "FieldCanBeLocal", "FieldMayBeFinal" })
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class RouteRequest
 {
 
-    private String stopId;
+    @JsonProperty private String stopId;
 
 
     public String getStopId()

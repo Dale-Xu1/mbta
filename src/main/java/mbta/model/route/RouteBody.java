@@ -2,25 +2,18 @@ package mbta.model.route;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-@SuppressWarnings({ "unused", "RedundantSuppression" })
-public class RouteList
+public class RouteBody
 {
 
     public static class Route
     {
         public static class Attributes
         {
-            @JsonProperty("short_name")
-            private String shortName;
+            @JsonProperty("short_name") private String shortName;
+            @JsonProperty("long_name") private String longName;
 
-            @JsonProperty("long_name")
-            private String longName;
-
-            @JsonProperty("direction_names")
-            private String[] directionNames;
-
-            @JsonProperty("direction_destinations")
-            private String[] directionDestinations;
+            @JsonProperty("direction_names") private String[] directionNames;
+            @JsonProperty("direction_destinations") private String[] directionDestinations;
 
             public String getShortName()
             {
@@ -44,8 +37,8 @@ public class RouteList
 
         }
 
-        private String id;
-        private Attributes attributes;
+        @JsonProperty private String id;
+        @JsonProperty private Attributes attributes;
 
         public String getId()
         {
@@ -59,7 +52,7 @@ public class RouteList
     }
 
 
-    private Route[] data;
+    @JsonProperty private Route[] data;
 
     public Route[] getData()
     {

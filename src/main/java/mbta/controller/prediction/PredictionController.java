@@ -2,7 +2,7 @@ package mbta.controller.prediction;
 
 import mbta.APIResources;
 import mbta.model.prediction.Prediction;
-import mbta.model.prediction.PredictionList;
+import mbta.model.prediction.PredictionBody;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,11 +26,11 @@ public class PredictionController
             "&sort=time&api_key=" + APIResources.MBTA_KEY;
 
         // Get data and parse JSON
-        PredictionList predictionList = template.getForObject(url, PredictionList.class);
-        assert predictionList != null;
+        PredictionBody predictionBody = template.getForObject(url, PredictionBody.class);
+        assert predictionBody != null;
 
         // Extract meaningful data
-        PredictionList.Prediction[] data = predictionList.getData();
+        PredictionBody.Prediction[] data = predictionBody.getData();
         Prediction[] predictions = new Prediction[data.length];
 
         for (int i = 0; i < predictions.length; i++)

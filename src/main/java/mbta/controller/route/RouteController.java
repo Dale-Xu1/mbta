@@ -2,7 +2,7 @@ package mbta.controller.route;
 
 import mbta.APIResources;
 import mbta.model.route.Route;
-import mbta.model.route.RouteList;
+import mbta.model.route.RouteBody;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,11 +25,11 @@ public class RouteController
             "&api_key=" + APIResources.MBTA_KEY;
 
         // Get data and parse JSON
-        RouteList routeList = template.getForObject(url, RouteList.class);
-        assert routeList != null;
+        RouteBody routeBody = template.getForObject(url, RouteBody.class);
+        assert routeBody != null;
 
         // Extract meaningful data
-        RouteList.Route[] data = routeList.getData();
+        RouteBody.Route[] data = routeBody.getData();
         Route[] routes = new Route[data.length];
 
         for (int i = 0; i < routes.length; i++)

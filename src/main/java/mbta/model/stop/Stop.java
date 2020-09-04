@@ -1,9 +1,9 @@
 package mbta.model.stop;
 
-import mbta.model.stop.StopList.Stop.Attributes;
-import mbta.model.stop.StopList.Stop.Relationships.ParentStation.Data;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import mbta.model.stop.StopBody.Stop.Attributes;
+import mbta.model.stop.StopBody.Stop.Relationships.ParentStation.Data;
 
-@SuppressWarnings({ "unused", "RedundantSuppression" })
 public class Stop
 {
 
@@ -18,11 +18,13 @@ public class Stop
             this.longitude = longitude;
         }
 
+        @JsonProperty
         public double getLatitude()
         {
             return latitude;
         }
 
+        @JsonProperty
         public double getLongitude()
         {
             return longitude;
@@ -36,7 +38,7 @@ public class Stop
     private final Location location;
 
 
-    public Stop(StopList.Stop stop)
+    public Stop(StopBody.Stop stop)
     {
         Attributes attributes = stop.getAttributes();
         Data data = stop.getRelationships().getParentStation().getData();
@@ -52,16 +54,19 @@ public class Stop
     }
 
 
+    @JsonProperty
     public String getName()
     {
         return name;
     }
 
+    @JsonProperty
     public String getId()
     {
         return id;
     }
 
+    @JsonProperty
     public Location getLocation()
     {
         return location;

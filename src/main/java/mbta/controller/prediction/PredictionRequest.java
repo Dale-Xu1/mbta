@@ -1,11 +1,12 @@
 package mbta.controller.prediction;
 
-@SuppressWarnings({ "unused", "RedundantSuppression", "FieldCanBeLocal", "FieldMayBeFinal" })
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class PredictionRequest
 {
 
-    private String stopId;
-    private String routeId;
+    @JsonProperty private String stopId;
+    @JsonProperty private String routeId;
 
 
     public String getStopId()
