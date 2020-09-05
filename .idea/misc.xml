@@ -8,6 +8,7 @@
     </list>
     <writeAnnotations>
       <writeAnnotation name="com.fasterxml.jackson.annotation.JsonProperty" />
+      <writeAnnotation name="org.springframework.beans.factory.annotation.Autowired" />
     </writeAnnotations>
   </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />

@@ -15,6 +15,6 @@ repositories {
 }
 
 dependencies {
-    compile 'org.springframework.boot:spring-boot-starter-web:2.3.3.RELEASE'
-    testCompile 'org.springframework.boot:spring-boot-starter-test:2.3.3.RELEASE'
+    implementation 'org.springframework.boot:spring-boot-starter-web:2.3.3.RELEASE'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test:2.3.3.RELEASE'
 }
